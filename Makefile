@@ -11,3 +11,6 @@ addDemo.o: addDemo.c
 
 .c.o:
 	$(CC) $(CFLAGS) -c $*.c
+
+clean:
+	@rm -fr *.o *.a
