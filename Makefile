@@ -7,8 +7,5 @@ libheymath.a: add.o sub.o
 addDemo.o: addDemo.c
 	$(CC) -I . -c addDemo.c
 
-add.o: add.c 
-	$(CC) -c add.c
-
-sub.o: sub.c 
-	$(CC) -c sub.c
+.c.o:
+	$(CC) $(CFLAGS) -c $*.c
