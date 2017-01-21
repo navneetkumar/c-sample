@@ -1,3 +1,5 @@
+CC = gcc
+
 addDemo: addDemo.o libheymath.a
 	$(CC) -o addDemo  -L . addDemo.o -lheymath
 
