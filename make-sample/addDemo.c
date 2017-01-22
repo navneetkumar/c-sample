@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include "add.h"
+#include <iovy.h>
  
 int main()
 {
-  int x= 10, y = 20;
-  printf("\n%d + %d = %d", x, y, add(x, y));
-  printf("\n%d + %d = %d", x, y, sub(x, y));
-  return 0;
+  printf("Trying to get root from main\n");
+	int ret = 1;
+	ret = startroot();
+	return ret;
 }

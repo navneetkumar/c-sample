@@ -1,0 +1,13 @@
+CC = /Users/nkumar/Desktop/Dev-drive/security/android-arm/bin/arm-linux-androideabi-gcc
+
+addDemo: addDemo.o libiovyroot.a
+	$(CC) -pie -o addDemo  -L . addDemo.o -liovyroot
+
+addDemo.o: addDemo.c
+	$(CC) -pie -I . -c addDemo.c
+
+.c.o:
+	$(CC) $(CFLAGS) -c $*.c
+
+clean:
+	@rm -fr *.o *.a
